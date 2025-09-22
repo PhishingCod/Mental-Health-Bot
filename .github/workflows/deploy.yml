@@ -21,8 +21,16 @@ jobs:
         run: npm install
 
 
+      - name: Print working directory
+        run: pwd
+
       - name: Build project
         run: npm run build
+
+      - name: List all files after build
+        run: |
+          echo "Listing all files after build:"
+          ls -l
 
       - name: List dist folder contents
         run: |
